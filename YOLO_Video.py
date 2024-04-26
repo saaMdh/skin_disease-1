@@ -4,6 +4,7 @@ import math
 
 def video_detection(path_x):
     video_capture = path_x
+    
     #Create a Webcam Object
     cap=cv2.VideoCapture(video_capture)
     frame_width=int(cap.get(3))
