@@ -2,6 +2,7 @@ from ultralytics import YOLO
 import cv2
 import math
 
+
 def video_detection(path_x):
     video_capture = path_x
     #Create a Webcam Object
