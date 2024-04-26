@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ObjectDetection-YOLOv8</title>
+    <style>
+        body{
+        font-family:Helvetica, sans-serif;
+        margin:0px;
+        padding:0px;
+        }
+        .header{
+          width: 100%;
+          height: 80px;
+          background-color: rgb(46, 46, 46);
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .wraper{
+          width: 40%;
+          height: 100%;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+        }
+        .logo{
+          height: 150px;
+        }
+        .wraper > a{
+          margin-left: 25px;
+          font-size: 20px;
+          cursor: pointer;
+          color: white;
+        }
+        .container{
+            width: 500vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            /* margin-top: 300vh; */
+        }
+        .form-inputs > input{
+            padding: 10px;
+            outline: none;
+            margin-top: 4px;
+            border-radius: 10px;
+        }
+
+        .slider-container {
+            width: 100%;
+            height: 70%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+        .footer{
+            width: 100vw;
+            height: 50vh;
+            padding-top: 100px;
+            background-color: rgb(53, 53, 53);
+            display: flex;
+        }
+        .SubFooter{
+            flex: 1;
+            margin-left: 2px;
+        }
+        .SubFooter > span{
+            color: white;
+            margin-bottom: 20px;
+        }
+        .SubFooter > div{
+            display: flex;
+            flex-direction: column;
+        }
+        .SubFooter > div > span{
+            color: white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="../static/images/logo.png" alt="" onclick="redirectToHomePage()">
+            <div class="wraper">
+              <a href="/home">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact us</a>
+              <a href="/FrontPage">Video</a>
+              <a href="/login">Login</a>
+              <a href="/register">Register</a>
+            </div>
+          </div>
+        <div class="slider-container">
+            <div class="slider">
+              <img src="https://images.pexels.com/photos/17114928/pexels-photo-17114928/free-photo-of-fleurs-centrale-plante-feuilles.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 1">
+              <img src="https://images.pexels.com/photos/19178438/pexels-photo-19178438/free-photo-of-ete-soleil-building-batiment.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 2">
+              <img src="https://images.pexels.com/photos/20755700/pexels-photo-20755700/free-photo-of-bois-ete-motif-texture.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 3">
+              <img src="https://images.pexels.com/photos/17114928/pexels-photo-17114928/free-photo-of-fleurs-centrale-plante-feuilles.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 1">
+              <img src="https://images.pexels.com/photos/19178438/pexels-photo-19178438/free-photo-of-ete-soleil-building-batiment.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 2">
+              <img src="https://images.pexels.com/photos/20755700/pexels-photo-20755700/free-photo-of-bois-ete-motif-texture.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Image 3">
+            </div>
+        </div>
+        <div class="about">
+            <h1 id="about">About:</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero minima corporis facere similique quam sunt eius sequi perspiciatis quia iusto rerum fugit molestias optio inventore cupiditate, eligendi laborum recusandae animi.
+            </p>
+        </div>
+        <div class="footer">
+            <div class="SubFooter">
+                <img class="logo" src="../static/images/logo.png" alt="" onclick="redirectToHomePage()">
+            </div>
+            <div class="SubFooter">
+                <h2 style="color: white;">NEWSLETTER SUBSCRIBE</h2>
+                <div style="display: flex; flex-direction: column; height: 50%; justify-content: space-around; align-items: start;">
+                    <span style="color: white;">
+                        Be informed in advance of our new products and good deals.
+                    </span>
+                    <div style="display: flex;">
+                        <input type="text" placeholder="Email ..." style="padding: 10px; outline: none;"> <button style="padding-left: 20px; padding-right: 20px;">Send</button>
+                    </div>
+                    <span style="color: white;">
+                        WIN 1 SESSION FOR 2
+                    </span>
+                    <span style="color: white;">
+                        Try your luck in
+                    </span>
+                </div>
+            </div>
+            <div class="SubFooter">
+                <h2 style="color: white;">CONTACT US</h2>
+                <div>
+                    <p>social media .....</p>
+                    <h2 style="color: white;">CUSTOMER SERVICE</h2>
+                    <span>0800 71 01 31 (free call)</span>
+                    <span>from 10 a.m. to 6 p.m. 7 days a week</span>
+                    <span>info@virtualtime.com</span>
+                </div>
+            </div>
+            <div class="SubFooter">
+                <h2 style="color: white;">MISCELLANEOUS</h2>
+                <div>
+                    <span>
+                        VirtualTime is recruiting!
+                    </span>
+                    <span>
+                        Accessibility & disabilities
+                    </span>
+                    <span>
+                        Our engagements
+                    </span>
+                    <span>
+                        Contact
+                    </span>
+                    <span>
+                        Legal Notice
+                    </span>
+                    <span>
+                        Privacy Policy
+                    </span>
+                    <span>
+                        Terms of use
+                    </span>
+                    <span>
+                        FAQs
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const slider = document.querySelector(".slider");
+        const images = document.querySelectorAll(".slider img");
+
+        let counter = 0;
+
+        function slide() {
+            counter++;
+            if (counter === images.length) {
+            counter = 0;
+            }
+            slider.style.transform = `translateX(${-counter * 100}%)`;
+        }
+
+        setInterval(slide, 3000); // Change image every 3 seconds
+        });
+    </script>
+</body>
+</html>
